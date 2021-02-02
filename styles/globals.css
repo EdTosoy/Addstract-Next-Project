@@ -27,12 +27,16 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1100px) minmax(
+  grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1050px) minmax(
       1rem,
       1fr
     );
 }
 
 .hero {
-  place-items: center start;
+  height: 650vh;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #102397 0%, #00eaf8 100%);
 }

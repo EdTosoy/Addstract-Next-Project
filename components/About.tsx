@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { useContext } from "react";
+import { DarkModeContext } from "../ContextAPI/darkMode";
 export default function About() {
+  const { darkmode } = useContext(DarkModeContext);
   return (
     <section className="grid-container pt-20 pb-10" id="About">
       <main className="col-start-2 col-end-3 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="max-w-sm">
-          <h1 className="text-xl md:text-3xl mb-4">
+          <h1 className="text-xl md:text-3xl mb-4 dark:text-white">
             The simplest way to have a professioanal webpage.
           </h1>
           <p className="max-w-xs text-sm">
@@ -15,7 +18,7 @@ export default function About() {
         </div>
         <div className="">
           <Image
-            src="/images/Process.png"
+            src={`/images/${darkmode ? "ProcessDark" : "Process"}.png`}
             width={640}
             height={527}
             alt="Devices"

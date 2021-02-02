@@ -1,5 +1,8 @@
 import Image from "next/image";
+import { useContext } from "react";
+import { DarkModeContext } from "../ContextAPI/darkMode";
 export default function Footer() {
+  const { darkmode } = useContext(DarkModeContext);
   const footerLinks1 = [
     "Home",
     "About us",
@@ -23,7 +26,7 @@ export default function Footer() {
   ];
   return (
     <footer className="grid-container">
-      <main className="col-start-2 col-end-3 flex flex-col md:flex-row justify-between border-t-2 pt-10 md:pt-20 pb-8 md:pb-16">
+      <main className="col-start-2 col-end-3 flex flex-col md:flex-row justify-between border-t-2 dark:border-gray-900 pt-10 md:pt-20 pb-8 md:pb-16">
         <div className="max-w-md text-xl mb-4 md:mb-0">
           <h1>
             Build your own future. <br />
@@ -31,15 +34,19 @@ export default function Footer() {
           </h1>
         </div>
         <div className="flex gap-2 justify-between md:justify-start">
-          <button className="py-3 px-5 text-sm text-white btn-primary transform hover:scale-105 rounded-full">
+          <button
+            className={`${
+              darkmode ? "btn-primary-dark" : "btn-primary"
+            } py-3 px-5 text-sm text-white btn-primary transform hover:scale-105 rounded-full`}
+          >
             Get early access
           </button>
-          <button className="py-3 px-5 text-sm text-darkBlue border-2 transform hover:scale-105 rounded-full">
+          <button className="py-3 px-5 text-sm text-darkBlue border-2 border-gray-700 transform hover:scale-105 rounded-full">
             View All Data
           </button>
         </div>
       </main>
-      <main className="col-start-2 col-end-3 grid grid-cols-2 md:grid-cols-4 justify-between border-t-2 py-10 text-sm">
+      <main className="col-start-2 col-end-3 grid grid-cols-2 md:grid-cols-4 justify-between border-t-2 dark:border-gray-900 py-10 text-sm">
         <div className="mb-4">
           {footerLinks1.map((element) => (
             <h1 className="hover:text-darkBlue cursor-pointer" key={element}>

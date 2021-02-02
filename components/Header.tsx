@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useContext } from "react";
+import { DarkModeContext } from "../ContextAPI/darkMode";
 
 export default function Header() {
   const navLinks = [
@@ -27,8 +29,11 @@ export default function Header() {
       id: "Contact",
     },
   ];
+
+  const { darkmode, setDarkmode } = useContext(DarkModeContext);
+  console.log(darkmode)
   return (
-    <header className="grid-container bg-white  sticky top-0 border z-50 ">
+    <header className="grid-container bg-white dark:bg-DarkModeBlue dark:border-gray-900 sticky top-0 border-b z-50 ">
       <main className="col-start-2 col-end-3 flex items-center justify-between py-5">
         <div className="">
           <a href="#">
@@ -41,9 +46,23 @@ export default function Header() {
               <a href={`#${id}`}>{name}</a>
             </nav>
           ))}
+          <div
+            className="cursor-pointer ml-4"
+            onClick={() => setDarkmode((prev) => !prev)}
+          >
+            {darkmode ? (
+              <box-icon
+                name="certification"
+                type="solid"
+                color="#00EAF8"
+              ></box-icon>
+            ) : (
+              <box-icon type="solid" name="moon" color="#F7618B" ></box-icon>
+            )}
+          </div>
         </div>
         <div className="grid place-content-center cursor-pointer md:hidden">
-          <box-icon name="menu" color="#0075C5" ></box-icon>
+          <box-icon name="menu" color="#0075C5"></box-icon>
         </div>
       </main>
     </header>

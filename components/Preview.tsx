@@ -1,10 +1,15 @@
 import Image from "next/image";
+import { useContext } from "react";
+import { DarkModeContext } from "../ContextAPI/darkMode";
 export default function Preview() {
+  const { darkmode } = useContext(DarkModeContext);
   return (
-    <section className="grid-container  pt-0 md:pt-32 pb-20" id="Preview"  >
+    <section className="grid-container  pt-0 md:pt-32 pb-20" id="Preview">
       <main className="col-start-2 col-end-3 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="max-w-sm">
-          <h1 className="text-xl md:text-3xl mb-4">The simplest way to have a professioanal webpage.</h1>
+          <h1 className="text-xl md:text-3xl mb-4 dark:text-white">
+            The simplest way to have a professioanal webpage.
+          </h1>
           <p className="max-w-xs text-sm">
             Get all the benefits of an in-wall or in-ceiling speaker system
             without any of the hassle. Just replace a few lights around your
@@ -13,7 +18,7 @@ export default function Preview() {
         </div>
         <div className="">
           <Image
-            src="/images/Cards.png"
+            src={`/images/${darkmode ? "CardsDark" : "Cards"}.png`}
             width={480}
             height={330}
             alt="Devices"

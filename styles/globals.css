@@ -40,3 +40,7 @@ a {
 .btn-primary {
   background: linear-gradient(to right, #102397 0%, #00eaf8 100%);
 }
+.btn-primary-dark {
+  background: linear-gradient(to right, #F7618B 0%, #2A7AFF 100%) !important;
+}
+

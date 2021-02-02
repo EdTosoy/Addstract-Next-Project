@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4232.031" height="8673.859" viewBox="0 0 4232.031 8673.859">
+  <defs>
+    <filter id="BG" x="2088.564" y="3567.319" width="2071.058" height="2071.058" filterUnits="userSpaceOnUse">
+      <feOffset dx="13" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="22.5" result="blur"/>
+      <feFlood flood-color="#1780e0" flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="BG-2" x="0" y="4441.828" width="4232.031" height="4232.031" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="22.5" result="blur-2"/>
+      <feFlood flood-color="#1780e0" flood-opacity="0.212"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="BG-3" x="1396.392" y="3711.848" width="1146.163" height="1146.163" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="22.5" result="blur-3"/>
+      <feFlood flood-color="#1780e0" flood-opacity="0.212"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="BG-4" x="712.956" y="1149.932" width="2597.924" height="2597.924" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="24.5" result="blur-4"/>
+      <feFlood flood-color="#1780e0" flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="BG-5" data-name="BG" transform="translate(67.555 -0.652)">
+    <path id="Rectangle_6" data-name="Rectangle 6" d="M1.45,170.24A100,100,0,0,1,96.236,53.479L1505.218.073a100,100,0,0,1,103.619,105.739L1452.905,2784.9a100,100,0,0,1-29.445,65.224L735.224,3532.079c-57.5,56.975-155.334,25.59-168.959-54.2Z" transform="translate(2898.459 0.652) rotate(43)" fill="#91b7dc" opacity="0.297"/>
+    <g transform="matrix(1, 0, 0, 1, -67.55, 0.65)" filter="url(#BG)">
+      <rect id="BG-6" data-name="BG" width="1369" height="1369" rx="100" transform="translate(3111.09 3619.82) rotate(45)" fill="#f6f9fd"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -67.55, 0.65)" filter="url(#BG-2)">
+      <path id="BG-7" data-name="BG" d="M869.535,49.655A100,100,0,0,1,955.937,0H3260.029a100,100,0,0,1,100,100V2334c0,64.752-60.6,112.43-123.534,97.191L76.531,1666.036c-65.047-15.75-96.563-89.711-62.868-147.537Z" transform="translate(1788.63 4494.33) rotate(45)" fill="#f6f9fd"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -67.55, 0.65)" filter="url(#BG-3)">
+      <rect id="BG-8" data-name="BG" width="715" height="715" rx="100" transform="translate(1969.47 3764.35) rotate(45)" fill="#f6f9fd"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -67.55, 0.65)" filter="url(#BG-4)">
+      <path id="BG-9" data-name="BG" d="M.175,105.857A100,100,0,0,1,100,0H1263a100,100,0,0,1,100,100V1314.74a100,100,0,0,1-45.228,83.667L266.427,2086.66c-64.311,42.1-150.1-1.075-154.6-77.809Z" transform="translate(2273.59 1221.43) rotate(45)" fill="#f6f9fd"/>
+    </g>
+  </g>
+</svg>

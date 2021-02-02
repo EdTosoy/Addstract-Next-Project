@@ -31,8 +31,8 @@ export default function Hero() {
       <main className="col-start-2 col-end-3 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="text-center md:text-left">
           <h1 className="sm:text-4xl  mb-4 md:mb-10 leading-10 ">
-            Do you want to  <span className="font-semibold">impress</span>{" "}
-            your clients?
+            Do you want to <br className="hidden md:block" />{" "}
+            <span className="font-semibold">impress</span> your clients?
           </h1>
           <button className="py-3 px-8  text-white btn-primary transform hover:scale-105 rounded-full">
             Get early access
@@ -41,8 +41,8 @@ export default function Hero() {
         <div className="">
           <Image
             src="/images/Device.png"
-            width={600}
-            height={520}
+            width={640}
+            height={519}
             alt="Device"
           />
         </div>
@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="flex justify-center mb-8 mt-5">
           {companies.map(({ image, name }) => (
             <div className="grid place-content-center" key={name}>
-              <Image src={image} width={130} height={50} alt={name} />
+              <Image src={image} width={181} height={78} alt={name} />
             </div>
           ))}
         </div>

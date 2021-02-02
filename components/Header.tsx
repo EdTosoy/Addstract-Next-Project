@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 import { DarkModeContext } from "../ContextAPI/darkMode";
 
@@ -31,7 +32,6 @@ export default function Header() {
   ];
 
   const { darkmode, setDarkmode } = useContext(DarkModeContext);
-  console.log(darkmode)
   return (
     <header className="grid-container bg-white dark:bg-DarkModeBlue dark:border-gray-900 sticky top-0 border-b z-50 ">
       <main className="col-start-2 col-end-3 flex items-center justify-between py-5">
@@ -43,7 +43,7 @@ export default function Header() {
         <div className="hidden md:flex text-grayBlue ">
           {navLinks.map(({ id, name }) => (
             <nav key={id} className="ml-5 hover:text-darkBlue">
-              <a href={`#${id}`}>{name}</a>
+              <Link href={`#${id}`}>{name}</Link>
             </nav>
           ))}
           <div
@@ -57,7 +57,7 @@ export default function Header() {
                 color="#00EAF8"
               ></box-icon>
             ) : (
-              <box-icon type="solid" name="moon" color="#F7618B" ></box-icon>
+              <box-icon type="solid" name="moon" color="#F7618B"></box-icon>
             )}
           </div>
         </div>

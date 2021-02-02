@@ -19,8 +19,8 @@ export default function Advantages() {
         <div className="">
           <Image
             src={`/images/${darkmode ? "DevicesDark.png" : "Devices.jpg"}`}
-            width={541}
-            height={529}
+            width={640}
+            height={575}
             alt="Devices"
           />
         </div>

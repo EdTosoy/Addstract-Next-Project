@@ -7,11 +7,11 @@ import Preview from "../components/Preview";
 import Video from "../components/Video";
 import React, { useContext } from "react";
 import Stats from "../components/Stats";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 import Head from "next/head";
 
 export default function HomePage() {
-  const { darkmode } = useContext(DarkModeContext);
+  const { darkmode } = useContext(AppContext);
   return (
     <div className={darkmode ? " bg-DarkModeBlue " : "bg-white"}>
       <Head>

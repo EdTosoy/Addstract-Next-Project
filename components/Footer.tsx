@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 export default function Footer() {
-  const { darkmode } = useContext(DarkModeContext);
+  const { darkmode } = useContext(AppContext);
   const footerLinks1 = [
     "Home",
     "About us",

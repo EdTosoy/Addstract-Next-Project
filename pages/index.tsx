@@ -1,10 +1,10 @@
-import { DarkModeProvider } from "../ContextAPI/darkMode";
+import { AppProvider } from "../ContextAPI/appContext";
 import HomePage from "./HomePage";
 
 export default function Home() {
   return (
-    <DarkModeProvider>
+    <AppProvider>
       <HomePage />
-    </DarkModeProvider>
+    </AppProvider>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 
 export default function Header() {
   const navLinks = [
@@ -31,9 +31,44 @@ export default function Header() {
     },
   ];
 
-  const { darkmode, setDarkmode } = useContext(DarkModeContext);
+  const { darkmode, setDarkmode, openMenu, setOpenMenu } = useContext(
+    AppContext
+  );
   return (
-    <header className="grid-container bg-white dark:bg-DarkModeBlue dark:border-gray-900 sticky top-0 border-b z-50 ">
+    <header
+      className="grid-container bg-white dark:bg-DarkModeBlue dark:border-gray-900 sticky top-0 border-b z-50 "
+      onClick={() => {
+        setOpenMenu((prev) => !prev);
+        console.log(openMenu);
+      }}
+    >
+      {openMenu && (
+        <div className="col-start-1 md:hidden  col-end-4  ">
+          <div className="top-16 border-t border-b shadow-3xl absolute w-full  text-center  p-6 bg-white dark:bg-DarkModeBlue dark:border-gray-900">
+            {navLinks.map(({ name, id }) => (
+              <a href={`#${id}`} key={name}>
+                <nav className="cursor-pointer navigation my-4 hover:text-darkBlue">
+                  {name}
+                </nav>
+              </a>
+            ))}
+            <div
+              className="cursor-pointer"
+              onClick={() => setDarkmode((prev) => !prev)}
+            >
+              {darkmode ? (
+                <box-icon
+                  name="certification"
+                  type="solid"
+                  color="#00EAF8"
+                ></box-icon>
+              ) : (
+                <box-icon type="solid" name="moon" color="#F7618B"></box-icon>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
       <main className="col-start-2 col-end-3 flex items-center justify-between py-5">
         <div className="">
           <a href="#">

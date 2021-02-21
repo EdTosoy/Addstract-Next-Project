@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 export default function Video() {
-  const { darkmode } = useContext(DarkModeContext);
+  const { darkmode } = useContext(AppContext);
   return (
     <section className="grid-container  pt-0 md:pt-32 pb-20" id="Video">
       <main className="col-start-2 col-end-3 relative">

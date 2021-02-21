@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 export default function Advantages() {
-  const { darkmode } = useContext(DarkModeContext);
+  const { darkmode } = useContext(AppContext);
   return (
     <section className="grid-container  pt-0 md:pt-32 pb-20" id="Advantages">
       <main className="col-start-2 col-end-3 flex flex-col-reverse md:flex-row-reverse justify-between items-center">
